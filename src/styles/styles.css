@@ -1,0 +1,47 @@
+/* 
+headers: {
+    font: Raleway;
+    size: 72px(h1),  42px(h2);
+    weight: 700,
+    line height: 84.53px(h1), 49.31px(h2)
+
+};
+
+text: {
+subheaders:  
+    font: Open Sans;
+    weight: 400,
+    size: 18px;
+    line height: 30px;
+
+description text:  
+    font:  Open Sans;
+    weight: 400,
+    size: 14px;
+    line height: 26px;
+};
+size
+text: Open Sans;
+*/
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+* {
+  font-size: 14px;
+  text-decoration: none;
+  list-style: none;
+}
+
+.header {
+  background-color: #191c2640;
+  display: flex;
+}
+
+.header-nav-list {
+  display: flex;
+}
+
+.header-navList-link {
+  color: #ffff;
+}
