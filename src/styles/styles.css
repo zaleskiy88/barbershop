@@ -23,25 +23,179 @@ description text:
 size
 text: Open Sans;
 */
+:root {
+  --main-bgc-color: #ffff;
+  --second-bgr-color: #191c26;
+
+  --text-main-color: #303030;
+
+  --accent-color: #ff6c00;
+
+  --main-btn-color: #fff;
+  --second-btn-color: #303030;
+  --btn-hover: #ff6c00;
+  --text-hover: #ff6c00;
+
+  --main-pre-title-color: #303030;
+  --second-pre-title-color: #9da4bd99;
+  --pre-title-font-size: 11px;
+
+  --main-title-color: #ffff;
+  --second-title-color: #303030;
+  --title-font-size: 42px;
+
+  --main-sub-title-color: #555;
+  --second-sub-title-color: #9da4bd;
+  --sub-title-font-size: 18px;
+
+  --main-contacts-text-color: #9da4bd;
+  --second-contacts-text-color: #9da4bd66;
+
+  --feature-text-color: #303030;
+  --feature-text-font-size: 11px;
+  --feature-number-size: 42px;
+  --feature-number-color: #303030;
+}
+
 body {
   font-family: 'Open Sans', sans-serif;
 }
 
 * {
   font-size: 14px;
-  text-decoration: none;
+  line-height: 1.33;
   list-style: none;
+  text-decoration: none;
+  font-style: normal;
+  margin: 0px;
 }
+
+/* ////////////////////////////////////////////////////////////////////////// */
 
 .header {
-  background-color: #191c2640;
+  background-color: #080a0f64;
   display: flex;
+  padding-right: 10px;
 }
 
+.header-text {
+  color: #ffff;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.1em;
+}
+
+.header-logo {
+  margin-right: 70px;
+}
 .header-nav-list {
   display: flex;
+  padding-left: 0px;
+  margin-right: 320px;
 }
 
-.header-navList-link {
+.header-navList-item:not(:last-child) {
+  margin-right: 40px;
+}
+
+.header-navList-link:hover,
+.header-navList-link:focus,
+.header-tel:hover,
+.header-tel:focus {
+  color: var(--accent-color);
+}
+
+.header-tel {
+  margin-right: 40px;
+}
+
+/* ------------------------------------------------ */
+.pre-title {
+  font-size: var(--pre-title-font-size);
+  color: var(--main-pre-title-color);
+  text-transform: uppercase;
+}
+.hero .pre-title {
+  color: var(--second-pre-title-color);
+}
+.contacts .pre-title {
   color: #ffff;
+}
+
+.section-header {
+  font-family: 'Raleway', sans-serif;
+  font-size: var(--title-font-size);
+  color: var(--second-title-color);
+  font-weight: 700;
+  line-height: 1.33;
+  letter-spacing: 2.1px;
+}
+.hero-header {
+  font-size: 72px;
+  font-weight: 700;
+  line-height: 1.33;
+  letter-spacing: 3.6px;
+}
+
+.sub-title {
+  font-size: var(--sub-title-font-size);
+  color: var(--main-sub-title-color);
+}
+.hero .sub-title,
+.prices .sub-title,
+.contacts .sub-title {
+  color: var(--second-sub-title-color);
+}
+
+.text-description {
+  color: var(--main-sub-title-color);
+  font-size: 14px;
+  line-height: 1.33;
+  letter-spacing: 0.28px;
+}
+/* ----------------------BUTTON--------------------- */
+.btn {
+  width: 160px;
+  height: 40px;
+  padding: 12px 20px;
+  border: 1px solid var(--accent-color);
+  border-radius: 25px;
+  letter-spacing: 1.08px;
+  text-transform: uppercase;
+  color: var(--main-btn-color);
+  font-family: inherit;
+  font-size: 12px;
+}
+.btn:hover,
+.btn:focus {
+  background-color: var(--btn-hover);
+}
+.about .btn {
+  color: var(--second-btn-color);
+}
+/* -----------------------OUR FEATURES--------------------- */
+.feature-text {
+  color: var(--feature-text-color);
+  font-size: var(--feature-text-font-size);
+  font-weight: 600;
+  line-height: 1.33;
+}
+.feature-number {
+  color: var(--feature-number-color);
+  font-size: var(--feature-number-size);
+  font-weight: 700;
+  letter-spacing: 2.1px;
+}
+/* -----------------------OUR TEAM--------------------- */
+.barber-name {
+  color: var(--text-main-color);
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: 0.36px;
+}
+.barber-skill {
+  font-size: 14px;
+  color: var(--accent-color);
+  letter-spacing: 0.28px;
 }
