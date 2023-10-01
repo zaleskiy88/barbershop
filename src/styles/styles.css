@@ -1,28 +1,3 @@
-/* 
-headers: {
-    font: Raleway;
-    size: 72px(h1),  42px(h2);
-    weight: 700,
-    line height: 84.53px(h1), 49.31px(h2)
-
-};
-
-text: {
-subheaders:  
-    font: Open Sans;
-    weight: 400,
-    size: 18px;
-    line height: 30px;
-
-description text:  
-    font:  Open Sans;
-    weight: 400,
-    size: 14px;
-    line height: 26px;
-};
-size
-text: Open Sans;
-*/
 :root {
   --main-bgc-color: #ffff;
   --second-bgr-color: #191c26;
@@ -63,14 +38,100 @@ body {
 
 * {
   font-size: 14px;
-  line-height: 1.33;
   list-style: none;
   text-decoration: none;
   font-style: normal;
-  margin: 0px;
+  /* margin: 0px; */
 }
 
-/* ////////////////////////////////////////////////////////////////////////// */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+/* -----------------PRE-TITLE, TITLE, SUB-TITLE------------------------------- */
+.pre-title {
+  font-size: var(--pre-title-font-size);
+  line-height: 1.36;
+  font-weight: 600;
+  color: var(--main-pre-title-color);
+  text-transform: uppercase;
+}
+
+.section-header {
+  font-family: 'Raleway', sans-serif;
+  font-size: var(--title-font-size);
+  color: var(--second-title-color);
+  font-weight: 700;
+  line-height: 1.33;
+  letter-spacing: 2.1px;
+}
+.hero-header {
+  font-size: 72px;
+  font-weight: 700;
+  line-height: 1.18;
+  letter-spacing: 3.6px;
+  color: var(--main-title-color);
+}
+
+.sub-title {
+  font-size: var(--sub-title-font-size);
+  color: var(--main-sub-title-color);
+  font-weight: 400;
+  line-height: calc(30 / var(--sub-title-font-size));
+  letter-spacing: 0.36px;
+}
+
+.text-description {
+  color: var(--main-sub-title-color);
+  font-size: 14px;
+  line-height: calc(26 / 14);
+  letter-spacing: 0.28px;
+}
+
+.social-link {
+  color: var(--main-pre-title-color);
+  font-size: 11px;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 2.2px;
+}
+.social-link:hover,
+.social-link:focus {
+  color: var(--accent-color);
+}
+/* ///////////////////////////////////////////////BUTTON */
+.btn {
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1.08px;
+  line-height: 1.33;
+  /* width: 160px;
+  height: 40px; */
+  padding: 12px 20px;
+  border: 1px solid var(--accent-color);
+  border-radius: 25px;
+  text-transform: uppercase;
+  color: var(--main-btn-color);
+}
+.btn:hover,
+.btn:focus {
+  background-color: var(--btn-hover);
+}
+.about .btn {
+  color: var(--second-btn-color);
+}
+
+/* ///////////////////////////////////////////// HEADER  */
 
 .header {
   background-color: #080a0f64;
@@ -110,84 +171,51 @@ body {
   margin-right: 40px;
 }
 
-/* ------------------------------------------------ */
-.pre-title {
-  font-size: var(--pre-title-font-size);
-  color: var(--main-pre-title-color);
-  text-transform: uppercase;
-}
+/* //////////////////////////////////////////////// HERO */
 .hero .pre-title {
   color: var(--second-pre-title-color);
 }
-.contacts .pre-title {
-  color: #ffff;
-}
 
-.section-header {
-  font-family: 'Raleway', sans-serif;
-  font-size: var(--title-font-size);
-  color: var(--second-title-color);
-  font-weight: 700;
-  line-height: 1.33;
-  letter-spacing: 2.1px;
-}
-.hero-header {
-  font-size: 72px;
-  font-weight: 700;
-  line-height: 1.33;
-  letter-spacing: 3.6px;
-}
-
-.sub-title {
-  font-size: var(--sub-title-font-size);
-  color: var(--main-sub-title-color);
-}
-.hero .sub-title,
-.prices .sub-title,
-.contacts .sub-title {
+.hero .sub-title {
   color: var(--second-sub-title-color);
 }
 
-.text-description {
-  color: var(--main-sub-title-color);
-  font-size: 14px;
-  line-height: 1.33;
-  letter-spacing: 0.28px;
+.hero-content {
+  background-color: #120e0e;
 }
-/* ----------------------BUTTON--------------------- */
-.btn {
-  width: 160px;
-  height: 40px;
-  padding: 12px 20px;
-  border: 1px solid var(--accent-color);
-  border-radius: 25px;
-  letter-spacing: 1.08px;
-  text-transform: uppercase;
-  color: var(--main-btn-color);
-  font-family: inherit;
-  font-size: 12px;
+
+/* /////////////////////////////////////////////// ABOUT */
+
+/* ////////////////////////////////////////////// PRICES */
+.prices {
+  background-color: #120e0e;
 }
-.btn:hover,
-.btn:focus {
-  background-color: var(--btn-hover);
+.prices .pre-title {
+  color: var(--second-pre-title-color);
 }
-.about .btn {
-  color: var(--second-btn-color);
+
+.prices .section-header {
+  color: var(--main-title-color);
 }
-/* -----------------------OUR FEATURES--------------------- */
+
+.prices .sub-title {
+  color: var(--second-sub-title-color);
+}
+/* //////////////////////////////////////// OUR FEATURES */
 .feature-text {
   color: var(--feature-text-color);
   font-size: var(--feature-text-font-size);
   font-weight: 600;
-  line-height: 1.33;
+  line-height: calc(15 / var(--feature-text-font-size));
 }
 .feature-number {
   color: var(--feature-number-color);
   font-size: var(--feature-number-size);
   font-weight: 700;
   letter-spacing: 2.1px;
+  line-height: calc(57 / var(--feature-number-size));
 }
-/* -----------------------OUR TEAM--------------------- */
+/* //////////////////////////////////////////// OUR TEAM */
 .barber-name {
   color: var(--text-main-color);
   font-size: 18px;
@@ -198,4 +226,38 @@ body {
   font-size: 14px;
   color: var(--accent-color);
   letter-spacing: 0.28px;
+}
+
+/* ///////////////////////////////////////////// GALLERY */
+
+/* ///////////////////////////// CONTACTS&ONLINE BOOKING */
+.book-online {
+  background-color: #120e0e;
+}
+.contacts {
+  background-color: #120e0e;
+}
+.book-online .section-header {
+  color: var(--main-title-color);
+}
+
+.contacts .pre-title {
+  color: #ffff;
+}
+
+.contacts .section-header {
+  color: var(--main-title-color);
+}
+
+.contacts .sub-title {
+  color: var(--second-sub-title-color);
+}
+
+/* ////////////////////////////////////////////// FOOTER */
+.footer-copyright {
+  color: #9da4bd;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: calc(15 / 11);
+  letter-spacing: 2.2px;
 }
