@@ -67,7 +67,6 @@ body {
   margin: 0 auto;
   padding-left: 15px;
   padding-right: 15px;
-
   outline: 1px solid black;
 }
 
@@ -98,6 +97,17 @@ body {
   font-weight: 600;
   color: var(--main-pre-title-color);
   text-transform: uppercase;
+  display: inline-flex;
+  gap: 20px;
+  align-items: center;
+}
+.pre-title::before {
+  content: ' ';
+  display: inline-block;
+  border-bottom: 1px solid;
+  border-color: inherit;
+  width: 60px;
+  height: 1px;
 }
 
 .section-header {
@@ -174,10 +184,6 @@ body {
   align-items: center;
 }
 
-.header-nav {
-  /* flex-grow: 1; */
-}
-
 .header-text {
   color: #ffff;
   font-weight: 600;
@@ -216,10 +222,12 @@ body {
 .hero-socialList {
   width: 90px;
 }
+
 .hero .pre-title {
   margin-bottom: 20px;
   color: var(--second-pre-title-color);
 }
+
 .hero-header {
   font-size: 72px;
   font-weight: 700;
@@ -236,8 +244,13 @@ body {
 
 .hero-content {
   padding: 270px 100px 200px 100px;
-  background-color: #120e0e;
   flex-grow: 1;
+
+  background-image: linear-gradient(#191c2633, #191c2633),
+    url(../images/hero-bg.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 /* /////////////////////////////////////////////// ABOUT */
@@ -268,9 +281,16 @@ body {
 
 /* ////////////////////////////////////////////// PRICES */
 .prices {
+  max-width: 1280px;
+  margin: 0 auto;
   padding-top: 130px;
   padding-bottom: 130px;
-  background-color: #120e0ecc;
+
+  background-color: #111319;
+  background-image: url(../images/prices-bg.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 .prices .pre-title {
   color: var(--second-pre-title-color);
@@ -293,6 +313,13 @@ body {
 .prices-list {
   padding: 30px 40px;
   flex-grow: 1;
+}
+
+.prices-list:nth-child(1) {
+  background: linear-gradient(180deg, #171a24 0%, #171a2433 100%);
+}
+.prices-list:nth-child(2) {
+  background: linear-gradient(180deg, #090b13 0%, #090b1333 100%);
 }
 
 .prices-list-item {
@@ -340,6 +367,7 @@ body {
 .features .section-header {
   margin-bottom: 20px;
 }
+
 /* //////////////////////////////////////////// OUR TEAM */
 .our-team {
   background-color: var(--details-bg-color);
@@ -352,6 +380,16 @@ body {
 
 .our-team .section-header {
   margin-bottom: 44px;
+}
+
+.barbers-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.barbers-list-item {
+  flex-basis: calc((100% - 60px) / 3);
 }
 
 .barber-img {
@@ -373,6 +411,38 @@ body {
   text-align: center;
 }
 
+.barbers-socials-list {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.barber-socials-item {
+  width: 44px;
+  height: 44px;
+}
+
+.barbers-socials-link {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: var(--main-title-color);
+  fill: var(--feature-number-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.barbers-socials-link:hover,
+.barbers-socials-link:focus {
+  box-shadow: 1px 1px 15px 0px rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 1px 1px 15px 0px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 1px 1px 15px 0px rgba(0, 0, 0, 0.25);
+}
+.barbers-socials-link:hover .barber-social-icon,
+.barbers-socials-link:focus .barber-social-icon {
+  fill: var(--accent-color);
+}
+
 /* ///////////////////////////////////////////// GALLERY */
 .gallery {
   padding: 130px 0;
@@ -381,14 +451,86 @@ body {
 .gallery .pre-title {
   margin-bottom: 44px;
 }
-/* ///////////////////////////// CONTACTS & ONLINE BOOKING */
-.contacts-and-book-online {
-  background-color: #120e0ecc;
+
+.gallery-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.gallery-list-item {
+  flex-basis: calc((100% - 90px) / 4);
+}
+/* ///////////////////////////// ONLINE BOOKING & CONTACTS*/
+.book-online {
+  padding-top: 130px;
+  padding-bottom: 190px;
+  padding-right: 40px;
+  width: 560px;
+}
+
+.inputs-wrapper {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 44px;
+}
+
+.form-input {
+  color: #fff;
+  background-color: #ffffff00;
+  border: 1px solid #9da4bd66;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  padding-bottom: 8px;
+}
+.form-input::placeholder {
+  font-size: 11px;
+  text-transform: uppercase;
+  color: #9da4bd66;
+}
+.form-input:hover,
+.form-input:focus {
+  border: 1px solid #fff;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+}
+.form-input:hover::placeholder,
+.form-input:focus::placeholder,
+.form-message-input:hover + .form-message-label,
+.form-message-input:focus + .form-message-label {
+  color: #fff;
+}
+
+.form-name-input {
+  width: calc(100% / 2);
+}
+
+.form-tel-input {
+  width: calc(100% / 2);
+}
+
+.form-message-wrapper {
+  display: flex;
+  flex-direction: column-reverse;
+}
+.form-message-input {
+  width: 100%;
+  height: 60px;
+  margin-bottom: 44px;
+}
+
+.form-message-label {
+  color: #9da4bd66;
+  font-size: 11px;
+  text-transform: uppercase;
 }
 
 .contacts-and-book-online .container {
   display: flex;
-  justify-content: space-between;
+  background-color: var(--second-bg-color);
+  padding-right: 0;
 }
 
 .book-online .section-header {
@@ -397,8 +539,12 @@ body {
 }
 
 .contacts {
-  padding: 130px 100px;
-  background-color: #120e0ecc;
+  padding: 130px 100px 126px 100px;
+  width: 625px;
+  background-image: url(../images/contacts-bg.png);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .contacts .section-header {
@@ -418,6 +564,23 @@ body {
   margin-bottom: 70px;
 }
 
+.contacts-link {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+
+  fill: var(--main-contacts-text-color);
+}
+
+.contacts-link:hover,
+.contacts-link:focus {
+  color: var(--main-title-color);
+}
+.contacts-link:hover .contacts-icon,
+.contacts-link:focus .contacts-icon {
+  fill: var(--main-title-color);
+}
+
 .contacts-list-item:not(:last-child) {
   margin-bottom: 20px;
 }
@@ -431,10 +594,29 @@ body {
   padding: 56px 0;
   background-color: var(--details-bg-color);
 }
+
+.footer .container {
+  display: flex;
+  justify-content: space-between;
+}
+
 .footer-copyright {
   color: #9da4bd;
   font-size: 11px;
   font-weight: 600;
   line-height: calc(15 / 11);
   letter-spacing: 2.2px;
+}
+
+.footer-social-list {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.footer-social-list::before {
+  content: ' ';
+  border-top: 1px solid var(--feature-text-color);
+  width: 60px;
+  height: 1px;
 }

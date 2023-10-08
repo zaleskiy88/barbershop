@@ -4,9 +4,28 @@
     <div class="book-online">
       <h2 class="section-header">Online booking</h2>
       <form class="book-online-form" action="">
-        <input type="text" />
-        <input type="text" />
-        <input type="text" />
+        <div class="inputs-wrapper">
+          <input
+            type="text"
+            placeholder="name*"
+            class="form-name-input form-input"
+          />
+          <input
+            type="text"
+            placeholder="telephone*"
+            class="form-tel-input form-input"
+          />
+        </div>
+
+        <div class="form-message-wrapper">
+          <input
+            type="text"
+            class="form-message-input form-input"
+            id="form-message"
+          />
+          <label for="form-message" class="form-message-label">Message</label>
+        </div>
+
         <button class="btn">send</button>
       </form>
     </div>
@@ -20,19 +39,24 @@
               href="https://maps.app.goo.gl/VMgreFVKzcaUa7dr8"
               target="_blank"
               rel="noopener nofollow noreferrer"
-              class="contacts-list-link sub-title"
-              >Rua Almeida Garrett Raposo, 64A Loja A, <br />Faro 8000-360</a
+              class="contacts-link sub-title"
+              ><svg class="contacts-icon" width="24" height="24">
+                <use href="./images/symbol-defs.svg#icon-map-pin"></use>
+              </svg>
+              Rua Almeida Garrett Raposo, 64A Loja A, <br />Faro 8000-360</a
             >
           </li>
           <li class="contacts-list-item sub-title">
-            <a href="tel:+351289987456" class="contacts-list-link sub-title"
+            <a href="tel:+351289987456" class="contacts-link sub-title"
+              ><svg class="contacts-icon" width="24" height="24">
+                <use href="./images/symbol-defs.svg#icon-phone"></use></svg
               >+351 289 987 456</a
             >
           </li>
           <li class="contacts-list-item sub-title">
-            <a
-              href="mailto:barberfaro@mail.com"
-              class="contacts-list-link sub-title"
+            <a href="mailto:barberfaro@mail.com" class="contacts-link sub-title"
+              ><svg class="contacts-icon" width="24" height="24">
+                <use href="./images/symbol-defs.svg#icon-mail"></use></svg
               >barberfaro@mail.com</a
             >
           </li>
