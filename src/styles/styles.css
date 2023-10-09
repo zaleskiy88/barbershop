@@ -162,6 +162,7 @@ body {
   text-transform: uppercase;
   color: var(--main-btn-color);
   background-color: transparent;
+  cursor: pointer;
 }
 .btn:hover,
 .btn:focus {
@@ -192,9 +193,18 @@ body {
   letter-spacing: 0.1em;
 }
 
-.header-logo {
+.header-logo-link {
   margin-right: 70px;
+  color: var(--main-pre-title-color);
 }
+.header-logo-link:hover {
+  color: var(--accent-color);
+}
+
+.header-logo-icon {
+  fill: currentColor;
+}
+
 .header-nav-list {
   display: flex;
   gap: 36px;
@@ -221,6 +231,24 @@ body {
 
 .hero-socialList {
   width: 90px;
+
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 96px;
+  padding-bottom: 150px;
+  align-items: center;
+}
+
+.hero-socialList-item {
+  transform: rotateZ(270deg);
+}
+
+.hero-socialList::before {
+  content: '';
+  display: block;
+  width: 60px;
+  border-bottom: 1px solid var(--main-pre-title-color);
+  transform: rotateZ(270deg);
 }
 
 .hero .pre-title {
@@ -276,7 +304,7 @@ body {
 }
 
 .text-description {
-  margin-bottom: 38px;
+  margin-bottom: 32px;
 }
 
 /* ////////////////////////////////////////////// PRICES */
