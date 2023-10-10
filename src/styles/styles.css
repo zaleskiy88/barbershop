@@ -35,9 +35,7 @@
   --feature-number-color: #303030;
 }
 
-/* Решта коду */
-
-/* ------------------- */
+/* ---------------------- STYLES RESET & CONTAINER ------------------ */
 p,
 h1,
 h2,
@@ -90,24 +88,22 @@ body {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
-/* -----------------PRE-TITLE, TITLE, SUB-TITLE------------------------------- */
+/* ----------------- MAIN ELEMENTS ------------------------------- */
 .pre-title {
   font-size: var(--pre-title-font-size);
   line-height: 1.36;
   font-weight: 600;
   color: var(--main-pre-title-color);
   text-transform: uppercase;
+
   display: inline-flex;
   gap: 20px;
   align-items: center;
 }
 .pre-title::before {
   content: ' ';
-  display: inline-block;
-  border-bottom: 1px solid;
-  border-color: inherit;
   width: 60px;
-  height: 1px;
+  border-bottom: 1px solid currentColor;
 }
 
 .section-header {
@@ -147,7 +143,8 @@ body {
 .social-link:focus {
   color: var(--accent-color);
 }
-/* ///////////////////////////////////////////////BUTTON */
+
+/*   BUTTON  */
 .btn {
   min-width: 160px;
   height: 40px;
@@ -167,9 +164,6 @@ body {
 .btn:hover,
 .btn:focus {
   background-color: var(--btn-hover);
-}
-.about .btn {
-  color: var(--second-btn-color);
 }
 
 /* ///////////////////////////////////////////// HEADER  */
@@ -235,7 +229,7 @@ body {
   display: flex;
   flex-direction: column-reverse;
   gap: 96px;
-  padding-bottom: 150px;
+  padding-bottom: 66px;
   align-items: center;
 }
 
@@ -307,6 +301,10 @@ body {
   margin-bottom: 32px;
 }
 
+.about .btn {
+  color: var(--second-btn-color);
+}
+
 /* ////////////////////////////////////////////// PRICES */
 .prices {
   max-width: 1280px;
@@ -334,6 +332,19 @@ body {
   color: var(--second-sub-title-color);
 }
 
+/* service and price line-separator */
+.prices .sub-title:first-child {
+  display: flex;
+  align-items: baseline;
+  flex-grow: 1;
+}
+.prices .sub-title:first-child::after {
+  content: '';
+  margin: 0 6px;
+  flex-grow: 1;
+  border-bottom: 1px solid rgba(157, 164, 189, 0.12);
+}
+/* -------------------------------------- */
 .prices-wrapper {
   display: flex;
 }
@@ -367,12 +378,30 @@ body {
   padding-bottom: 138px;
 }
 
+.features .container {
+  display: flex;
+}
+
+.features-list {
+  display: flex;
+  gap: 30px;
+  padding-left: 100px;
+  padding-right: 115px;
+}
+
+.features-list-right {
+  padding-top: 35px;
+}
+
 .features-list-item {
   width: 170px;
   height: 133px;
   padding: 20px 24px;
   background-color: var(--details-bg-color);
   border: 0.5px dashed black;
+}
+.features-list-item:not(:last-child) {
+  margin-bottom: 30px;
 }
 
 .feature-text {
@@ -386,7 +415,6 @@ body {
   font-size: var(--feature-number-size);
   line-height: calc(57 / 42);
   letter-spacing: 2.1px;
-  /* text-align: center; */
   display: block;
   color: var(--feature-number-color);
 }
@@ -394,6 +422,10 @@ body {
 .features .pre-title,
 .features .section-header {
   margin-bottom: 20px;
+}
+
+.features .sub-title {
+  max-width: 500px;
 }
 
 /* //////////////////////////////////////////// OUR TEAM */
