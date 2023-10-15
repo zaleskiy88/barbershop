@@ -36,6 +36,10 @@
 }
 
 /* ---------------------- STYLES RESET & CONTAINER ------------------ */
+html {
+  scroll-behavior: smooth;
+}
+
 p,
 h1,
 h2,
@@ -65,7 +69,6 @@ body {
   margin: 0 auto;
   padding-left: 15px;
   padding-right: 15px;
-  outline: 1px solid black;
 }
 
 * {
@@ -73,6 +76,12 @@ body {
   list-style: none;
   text-decoration: none;
   font-style: normal;
+}
+
+.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
 }
 
 .visually-hidden {
@@ -88,7 +97,12 @@ body {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+
+.no-scroll {
+  overflow: hidden;
+}
 /* ----------------- MAIN ELEMENTS ------------------------------- */
+/* texts */
 .pre-title {
   font-size: var(--pre-title-font-size);
   line-height: 1.36;
@@ -100,12 +114,13 @@ body {
   gap: 20px;
   align-items: center;
 }
+/* decorative line on the left side */
 .pre-title::before {
   content: ' ';
   width: 60px;
   border-bottom: 1px solid currentColor;
 }
-
+/* ------------------------------- */
 .section-header {
   font-family: 'Raleway', sans-serif;
   font-size: var(--title-font-size);
@@ -132,6 +147,7 @@ body {
   margin-bottom: 38px;
 }
 
+/* --- social link ---*/
 .social-link {
   color: var(--main-pre-title-color);
   font-size: 11px;
@@ -180,19 +196,55 @@ body {
   color: var(--main-btn-color);
   background-color: transparent;
   cursor: pointer;
-  transition: background-color 0.15s linear;
+
+  transition: 0.15s linear;
 }
 .btn:hover,
 .btn:focus {
   background-color: var(--btn-hover);
-  transform: background-color;
-  outline: none;
 }
+/* modal window */
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  z-index: 99;
+  width: 100%;
+  height: 100%;
+  background-color: #090b1358;
+
+  transition: opacity 0.2s linear, visibility 0.2s linear;
+}
+
+.modal-window {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 528px;
+  min-height: 600px;
+  transform: translate(-50%, -50%);
+  background-color: var(--main-bg-color);
+  border-radius: 5px;
+}
+
+.modal-window-close-btn {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50px;
+  cursor: pointer;
+  align-items: center;
+}
+/* ----------- */
 
 /* ///////////////////////////////////////////// HEADER  */
 
 .header {
-  background-color: #080a0f64;
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+  margin: 0 auto;
   padding-top: 32px;
   padding-bottom: 32px;
 }
@@ -213,7 +265,10 @@ body {
 .header-logo-link {
   margin-right: 70px;
   color: var(--main-pre-title-color);
+  fill: currentColor;
   outline: none;
+
+  transition: color 1s linear;
 }
 .header-logo-link:hover,
 .header-logo-link:focus {
@@ -221,7 +276,7 @@ body {
   outline: none;
 }
 
-.header-logo-icon {
+.header-logo-link:hover .header-logo-icon {
   fill: currentColor;
 }
 
@@ -241,7 +296,7 @@ body {
 .header-tel {
   transition: 0.2s linear;
 }
-/* line under nav-link */
+/* decorative line under nav-link */
 .header-navList-link::after,
 .header-tel::after {
   content: '';
@@ -286,16 +341,17 @@ body {
   padding-bottom: 66px;
   align-items: center;
 }
+/* decorative line on the left side */
 .hero-socialList::before {
   content: '';
   display: block;
   width: 60px;
   border-bottom: 1px solid var(--accent-color);
-  transform: rotateZ(270deg);
+  transform: rotateZ(-90deg);
 }
-
+/*---------------------------------*/
 .hero-socialList-item {
-  transform: rotateZ(270deg);
+  transform: rotateZ(-90deg);
 }
 
 .hero .pre-title {
@@ -356,6 +412,11 @@ body {
 
 .about .btn {
   color: var(--second-btn-color);
+}
+.about .btn:hover,
+.about .btn:focus {
+  color: #fff;
+  outline: none;
 }
 
 /* ////////////////////////////////////////////// PRICES */
@@ -512,9 +573,30 @@ body {
 .barbers-list-item {
   flex-basis: calc((100% - 60px) / 3);
 }
+.barbers-list-item:hover .barber-overlay-description,
+.barbers-list-item:focus .barber-overlay-description {
+  transform: translateY(0);
+}
 
-.barber-img {
+.barber-img-wrapper {
+  position: relative;
+  overflow: hidden;
   margin-bottom: 20px;
+}
+
+.barber-overlay-description {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  padding: 45px;
+  color: var(--details-bg-color);
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: 0.36px;
+  background-color: #ff6c00b0;
+
+  transform: translateY(100%);
+  transition: transform 0.38s linear;
 }
 .barber-name {
   color: var(--text-main-color);
@@ -749,9 +831,11 @@ body {
   gap: 40px;
 }
 
+/* decorative line on the left side */
 .footer-social-list::before {
   content: ' ';
-  border-top: 1px solid var(--feature-text-color);
+  border-top: 1px solid var(--accent-color);
   width: 60px;
   height: 1px;
 }
+/*                  */
