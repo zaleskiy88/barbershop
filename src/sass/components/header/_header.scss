@@ -1,0 +1,21 @@
+.header {
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+  margin: 0 auto;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
+  .container {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.header-text {
+  color: #ffff;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.1em;
+}

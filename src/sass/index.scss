@@ -1,2 +1,51 @@
-@import './common';
-@import './example';
+@import './base/common';
+/////////////      Utils
+@import './utils/variables';
+@import './utils/isHidden';
+@import './utils/visuallyHidden';
+@import './utils/noScroll';
+/////////////      Components
+@import './components/container';
+@import './components/socialLink';
+@import './components/button';
+/////////////      Components: Texts
+@import './components/texts/preTitle';
+@import './components/texts/sectionHeader';
+@import './components/texts/subTitle';
+@import './components/texts/textDescription';
+/////////////      Components: Modal window
+@import './components/modal/modalBackdrop';
+@import './components/modal/modalWindow';
+@import './components/modal/modalWindowCloseBtn';
+@import './components/modal/modalForm/modalForm';
+@import './components/modal/modalForm/modalInput';
+/////////////      Components: Header
+@import './components/header/header';
+@import './components/header/headerLogoLink';
+@import './components/header/headerNavigation';
+@import './components/header/headerContacts';
+/////////////      Components: Hero
+@import './components/hero/hero';
+@import './components/hero/heroSocialList';
+/////////////      Components: About
+@import './components/about/about';
+@import './components/about/aboutList';
+/////////////      Components: Prices
+@import './components/prices/prices';
+@import './components/prices/pricesList';
+/////////////      Components: Features
+@import './components/features/features';
+@import './components/features/featuresList';
+/////////////      Components: Our team
+@import './components/ourTeam/ourTeam';
+@import './components/ourTeam/barbersList';
+@import './components/ourTeam/barbersCard';
+/////////////      Components: Gallery
+@import './components/gallery/gallery';
+@import './components/gallery/galleryList';
+/////////////      Components: Online booking & contacts
+@import './components/onlineBookingAndContacts/bookOnline';
+@import './components/onlineBookingAndContacts/bookingForm';
+@import './components/onlineBookingAndContacts/contacts';
+/////////////      Components: Footer
+@import './components/footer/footer';

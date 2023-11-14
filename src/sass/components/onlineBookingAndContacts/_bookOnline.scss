@@ -1,0 +1,22 @@
+.book-online {
+  padding-top: 130px;
+  padding-bottom: 190px;
+  padding-right: 40px;
+  width: 560px;
+
+  .section-header {
+    color: var(--main-title-color);
+    margin-bottom: 44px;
+  }
+}
+
+.contacts-and-book-online {
+  .container {
+    display: flex;
+    background-color: var(--second-bg-color);
+    padding-right: 0;
+  }
+  .pre-title {
+    margin-bottom: 20px;
+  }
+}

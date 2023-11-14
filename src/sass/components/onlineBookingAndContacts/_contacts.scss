@@ -1,0 +1,43 @@
+.contacts {
+  padding: 130px 100px 126px 100px;
+  width: 625px;
+  background-image: url(../images/contacts-bg.png);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  .section-header {
+    color: var(--main-title-color);
+    margin-bottom: 40px;
+  }
+  .pre-title {
+    color: #ffff;
+  }
+  .sub-title {
+    color: var(--second-sub-title-color);
+  }
+}
+
+.contacts-list {
+  margin-bottom: 70px;
+}
+
+.contacts-list-item:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.contacts-link {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  color: var(--main-contacts-text-color);
+  fill: currentColor;
+
+  transition: color 0.2s linear;
+
+  &:hover,
+  &:focus {
+    color: var(--main-title-color);
+    outline: none;
+  }
+}

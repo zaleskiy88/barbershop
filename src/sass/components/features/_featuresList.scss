@@ -1,0 +1,21 @@
+.features-list {
+  display: flex;
+  gap: 30px;
+  padding-left: 100px;
+  padding-right: 115px;
+}
+
+.features-list-right {
+  padding-top: 35px;
+}
+
+.features-list-item {
+  width: 170px;
+  height: 133px;
+  padding: 20px 24px;
+  background-color: var(--details-bg-color);
+
+  &:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}

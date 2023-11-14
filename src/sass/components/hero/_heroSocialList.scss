@@ -1,0 +1,22 @@
+.hero-socialList {
+  width: 90px;
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 96px;
+  padding-bottom: 66px;
+  align-items: center;
+
+  /* decorative line on the left side */
+  &::before {
+    content: '';
+    display: block;
+    width: 60px;
+    border-bottom: 1px solid var(--accent-color);
+    transform: rotateZ(-90deg);
+  }
+  /*---------------------------------*/
+}
+
+.hero-socialList-item {
+  transform: rotateZ(-90deg);
+}

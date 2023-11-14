@@ -1,0 +1,33 @@
+.social-link {
+  color: var(--main-pre-title-color);
+  font-size: 11px;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 2.2px;
+
+  transition: 0.2s linear;
+
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+    outline: none;
+  }
+
+  /* line under social link */
+  &::after {
+    content: '';
+    visibility: hidden;
+    height: 1px;
+    width: 100%;
+    border-radius: 4px;
+    display: block;
+    background-color: var(--accent-color);
+    transform: scale(0);
+    transition: 0.18s linear;
+  }
+  &:hover::after,
+  &:focus::after {
+    visibility: visible;
+    transform: scale(1);
+  }
+}

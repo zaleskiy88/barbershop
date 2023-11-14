@@ -1,0 +1,40 @@
+.features {
+  padding-top: 144px;
+  padding-bottom: 138px;
+
+  .container {
+    display: flex;
+  }
+  .pre-title,
+  .section-header {
+    margin-bottom: 20px;
+  }
+  .sub-title {
+    max-width: 500px;
+  }
+}
+
+.feature-text {
+  color: var(--feature-text-color);
+  font-size: var(--feature-text-font-size);
+  font-weight: 600;
+  line-height: calc(15 / 11);
+}
+
+.feature-number {
+  position: relative;
+  font-weight: 700;
+  font-size: var(--feature-number-size);
+  line-height: calc(57 / 42);
+  letter-spacing: 2.1px;
+  display: block;
+  color: var(--feature-number-color);
+
+  &::after {
+    position: absolute;
+    top: 5px;
+    content: '+';
+    color: var(--accent-color);
+    font-size: 16px;
+  }
+}

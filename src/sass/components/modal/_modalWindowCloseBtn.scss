@@ -1,0 +1,22 @@
+.modal-window-close-btn {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  width: 30px;
+  height: 30px;
+  padding: 6px;
+  border: 1px solid #0000004a;
+  border-radius: 50px;
+  background-color: var(--main-bg-color);
+  color: var(--feature-text-color);
+  cursor: pointer;
+  transition: color 0.2s linear;
+
+  &:hover {
+    color: var(--accent-color);
+  }
+}
+
+.modal-btn-close-icon {
+  fill: currentColor;
+}

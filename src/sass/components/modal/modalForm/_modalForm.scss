@@ -1,0 +1,13 @@
+.modal-form {
+  padding: 40px;
+
+  .btn {
+    color: var(--second-btn-color);
+    margin: 0 auto;
+
+    &:hover,
+    &:focus {
+      color: var(--main-bg-color);
+    }
+  }
+}

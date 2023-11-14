@@ -1,0 +1,26 @@
+.about {
+  padding-top: 160px;
+  padding-bottom: 90px;
+
+  .container {
+    display: flex;
+  }
+  .pre-title,
+  .section-header,
+  .sub-title {
+    margin-bottom: 20px;
+  }
+
+  .text-description {
+    margin-bottom: 32px;
+  }
+
+  .btn {
+    color: var(--second-btn-color);
+  }
+  & .btn:hover,
+  & .btn:focus {
+    color: #fff;
+    outline: none;
+  }
+}

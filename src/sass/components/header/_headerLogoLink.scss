@@ -1,0 +1,14 @@
+.header-logo-link {
+  margin-right: 70px;
+  color: var(--main-pre-title-color);
+  fill: currentColor;
+  outline: none;
+
+  transition: color 1s linear;
+
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+    outline: none;
+  }
+}

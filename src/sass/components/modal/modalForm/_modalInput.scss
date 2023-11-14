@@ -1,0 +1,65 @@
+.modal-input-wrapper {
+  position: relative;
+}
+
+////////////// input-label
+.modal-form-label {
+  display: block;
+  font-size: 12px;
+  margin-bottom: 4px;
+  color: #30303096;
+}
+////////////// modal-form-input
+.modal-form-input {
+  width: 100%;
+  height: 40px;
+  padding: 11px 42px;
+  margin-bottom: 10px;
+  border: 1.5px solid;
+  border-color: var(--main-pre-title-color);
+  border-radius: 4px;
+  font-size: 14px;
+  color: var(--feature-text-color);
+  transition: border-color 0.2s linear;
+
+  &:focus {
+    outline: none;
+    border-color: var(--accent-color);
+  }
+}
+
+////////////// modal-input-icon
+.modal-input-icon-wrapper {
+  color: var(--feature-text-color);
+  transition: color 0.2s linear;
+
+  // changes icon color when focusing on input
+  .modal-form-input:focus + & {
+    color: var(--accent-color);
+    fill: currentColor;
+  }
+}
+
+.modal-input-icon {
+  position: absolute;
+  top: 30;
+  left: 11;
+  fill: currentColor;
+}
+
+////////////// modal-form-message
+.modal-form-message {
+  width: 100%;
+  height: 120px;
+  padding: 12px 16px;
+  margin-bottom: 66px;
+  border: 1.5px solid var(--main-pre-title-color);
+  border-radius: 4px;
+  resize: none;
+  transition: border-color 0.2s linear;
+
+  &:focus {
+    outline: none;
+    border-color: var(--accent-color);
+  }
+}

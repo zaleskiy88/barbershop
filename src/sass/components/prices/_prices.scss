@@ -1,0 +1,41 @@
+.prices {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding-top: 130px;
+  padding-bottom: 130px;
+
+  background-color: #111319;
+  background-image: url(../images/prices-bg.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  .pre-title {
+    color: var(--second-pre-title-color);
+    margin-bottom: 20px;
+  }
+  .section-header {
+    color: var(--main-title-color);
+    margin-bottom: 44px;
+  }
+  .sub-title {
+    color: var(--second-sub-title-color);
+  }
+  /* service and price line-separator */
+  .sub-title:first-child {
+    display: flex;
+    align-items: baseline;
+    flex-grow: 1;
+  }
+  .sub-title:first-child::after {
+    content: '';
+    margin: 0 6px;
+    flex-grow: 1;
+    border-bottom: 1px solid rgba(157, 164, 189, 0.12);
+  }
+  /* -------------------------------------- */
+}
+
+.prices-btn {
+  margin: 50 auto 0 auto;
+}
