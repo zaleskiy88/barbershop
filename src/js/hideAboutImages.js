@@ -3,12 +3,13 @@ const refs = {
 };
 
 function hideAboutImages() {
+  const availWidth = window.screen.availWidth;
   const screenWidth = window.innerWidth;
 
-  if (screenWidth <= 480) {
+  if (availWidth <= 480) {
     refs.aboutList.classList.add('is-hidden', 'visually-hidden');
   }
-  if (screenWidth > 480) {
+  if (availWidth > 480) {
     refs.aboutList.classList.remove('is-hidden', 'visually-hidden');
   }
 }
