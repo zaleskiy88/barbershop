@@ -85,24 +85,10 @@ body {
 }
 
 .container {
-  width: 480px;
+  width: 1200px;
   margin: 0 auto;
-  padding-left: 31px;
-  padding-right: 31px;
-}
-@media screen and (min-width: 767px) {
-  .container {
-    width: 690px;
-    padding-left: 39px;
-    padding-right: 39px;
-  }
-}
-@media screen and (min-width: 1199px) {
-  .container {
-    width: 1200px;
-    padding-left: 15px;
-    padding-right: 15px;
-  }
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 .social-link {
@@ -460,8 +446,8 @@ body {
 }
 
 .about {
-  padding-top: 84px;
-  padding-bottom: 84px;
+  padding-top: 160px;
+  padding-bottom: 90px;
 }
 .about .container {
   display: flex;
@@ -480,18 +466,6 @@ body {
 .about .btn:hover, .about .btn:focus {
   color: #fff;
   outline: none;
-}
-@media screen and (min-width: 767px) {
-  .about {
-    padding-left: 39px;
-    padding-right: 39px;
-  }
-}
-@media screen and (min-width: 1199px) {
-  .about {
-    padding-top: 160px;
-    padding-bottom: 90px;
-  }
 }
 
 .about-list {
