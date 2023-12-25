@@ -34,6 +34,10 @@ body {
   font-style: normal;
 }
 
+section {
+  margin: 0 auto;
+}
+
 :root {
   --main-bg-color: #ffff;
   --second-bg-color: #191c26;
@@ -85,10 +89,25 @@ body {
 }
 
 .container {
-  width: 1200px;
+  width: 100%;
   margin: 0 auto;
   padding-left: 15px;
   padding-right: 15px;
+}
+@media screen and (min-width: 480px) {
+  .container {
+    max-width: 448px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 728px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .container {
+    max-width: 1200px;
+  }
 }
 
 .social-link {
@@ -446,8 +465,8 @@ body {
 }
 
 .about {
-  padding-top: 160px;
-  padding-bottom: 90px;
+  padding-top: 84px;
+  padding-bottom: 84px;
 }
 .about .container {
   display: flex;
@@ -470,8 +489,15 @@ body {
 
 .about-list {
   display: flex;
+  flex-direction: column;
   gap: 30px;
-  margin-right: 64px;
+  margin-right: 30px;
+}
+@media screen and (min-width: 1280px) {
+  .about-list {
+    flex-direction: row;
+    margin-right: 64px;
+  }
 }
 
 .prices {
@@ -497,6 +523,12 @@ body {
 }
 .prices .sub-title {
   color: var(--second-sub-title-color);
+  font-size: 14px;
+}
+@media screen and (min-width: 768px) {
+  .prices .sub-title {
+    font-size: 18px;
+  }
 }
 .prices .sub-title:first-child {
   display: flex;
@@ -515,18 +547,38 @@ body {
 }
 
 .prices-wrapper {
-  display: flex;
+  background: linear-gradient(180deg, #090b13 0%, rgba(9, 11, 19, 0.2) 100%);
+}
+@media screen and (min-width: 1280px) {
+  .prices-wrapper {
+    display: flex;
+  }
 }
 
 .prices-list {
-  padding: 30px 40px;
+  padding: 30px 15px;
   flex-grow: 1;
 }
+@media screen and (min-width: 768px) {
+  .prices-list {
+    padding: 30px 40px;
+  }
+}
 .prices-list:nth-child(1) {
-  background: linear-gradient(180deg, #171a24 0%, rgba(23, 26, 36, 0.2) 100%);
+  padding-bottom: 0;
+}
+@media screen and (min-width: 1280px) {
+  .prices-list:nth-child(1) {
+    background: linear-gradient(180deg, #171a24 0%, rgba(23, 26, 36, 0.2) 100%);
+  }
 }
 .prices-list:nth-child(2) {
-  background: linear-gradient(180deg, #090b13 0%, rgba(9, 11, 19, 0.2) 100%);
+  padding-top: 20px;
+}
+@media screen and (min-width: 1280px) {
+  .prices-list:nth-child(2) {
+    background: linear-gradient(180deg, #090b13 0%, rgba(9, 11, 19, 0.2) 100%);
+  }
 }
 
 .prices-list-item {
@@ -543,6 +595,12 @@ body {
 }
 .features .container {
   display: flex;
+  flex-direction: column-reverse;
+}
+@media screen and (min-width: 1280px) {
+  .features .container {
+    flex-direction: row;
+  }
 }
 .features .pre-title,
 .features .section-header {
@@ -579,8 +637,18 @@ body {
 .features-list {
   display: flex;
   gap: 30px;
-  padding-left: 100px;
-  padding-right: 115px;
+  margin-top: 44px;
+}
+@media screen and (min-width: 768px) {
+  .features-list {
+    justify-content: flex-end;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .features-list {
+    padding-left: 100px;
+    padding-right: 115px;
+  }
 }
 
 .features-list-right {
@@ -588,8 +656,6 @@ body {
 }
 
 .features-list-item {
-  width: 170px;
-  height: 133px;
   padding: 20px 24px;
   background-color: var(--details-bg-color);
 }
@@ -717,9 +783,11 @@ body {
   margin-bottom: 44px;
 }
 
+.contacts-and-book-online {
+  background-color: var(--second-bg-color);
+}
 .contacts-and-book-online .container {
   display: flex;
-  background-color: var(--second-bg-color);
   padding-right: 0;
 }
 .contacts-and-book-online .pre-title {
@@ -833,6 +901,7 @@ body {
 .footer {
   padding: 56px 0;
   background-color: var(--details-bg-color);
+  margin: 0 auto;
 }
 .footer .container {
   display: flex;

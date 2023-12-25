@@ -1,8 +1,15 @@
 .features-list {
   display: flex;
   gap: 30px;
-  padding-left: 100px;
-  padding-right: 115px;
+  margin-top: 44px;
+
+  @media screen and (min-width: 768px) {
+    justify-content: flex-end;
+  }
+  @media screen and (min-width: 1280px) {
+    padding-left: 100px;
+    padding-right: 115px;
+  }
 }
 
 .features-list-right {
@@ -10,8 +17,8 @@
 }
 
 .features-list-item {
-  width: 170px;
-  height: 133px;
+  // width: 170px;
+  // height: 133px;
   padding: 20px 24px;
   background-color: var(--details-bg-color);
 

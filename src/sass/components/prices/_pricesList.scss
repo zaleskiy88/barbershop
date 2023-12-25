@@ -1,16 +1,30 @@
 .prices-wrapper {
-  display: flex;
+  background: linear-gradient(180deg, #090b13 0%, #090b1333 100%);
+
+  @media screen and (min-width: 1280px) {
+    display: flex;
+  }
 }
 
 .prices-list {
-  padding: 30px 40px;
+  padding: 30px 15px;
   flex-grow: 1;
 
+  @media screen and (min-width: 768px) {
+    padding: 30px 40px;
+  }
+
   &:nth-child(1) {
-    background: linear-gradient(180deg, #171a24 0%, #171a2433 100%);
+    padding-bottom: 0;
+    @media screen and (min-width: 1280px) {
+      background: linear-gradient(180deg, #171a24 0%, #171a2433 100%);
+    }
   }
   &:nth-child(2) {
-    background: linear-gradient(180deg, #090b13 0%, #090b1333 100%);
+    padding-top: 20px;
+    @media screen and (min-width: 1280px) {
+      background: linear-gradient(180deg, #090b13 0%, #090b1333 100%);
+    }
   }
 }
 

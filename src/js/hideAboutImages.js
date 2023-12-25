@@ -6,10 +6,10 @@ function hideAboutImages() {
   const availWidth = window.screen.availWidth;
   const screenWidth = window.innerWidth;
 
-  if (availWidth <= 480) {
+  if (availWidth <= 768) {
     refs.aboutList.classList.add('is-hidden', 'visually-hidden');
   }
-  if (availWidth > 480) {
+  if (availWidth > 768) {
     refs.aboutList.classList.remove('is-hidden', 'visually-hidden');
   }
 }
