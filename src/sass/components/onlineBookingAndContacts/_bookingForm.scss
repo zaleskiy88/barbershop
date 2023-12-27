@@ -1,7 +1,22 @@
+.book-online-form {
+  margin-top: 44px;
+
+  .btn {
+    @media screen and (max-width: 768px) {
+      margin: 0 auto;
+    }
+  }
+}
+
 .inputs-wrapper {
   display: flex;
-  gap: 30px;
+  flex-direction: column;
+  gap: 44px;
   margin-bottom: 44px;
+
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+  }
 }
 
 .form-input {
@@ -36,11 +51,17 @@
 }
 
 .form-name-input {
-  width: calc(100% / 2);
+  width: 100%;
+  @media screen and (min-width: 1200px) {
+    width: calc(100% / 2);
+  }
 }
 
 .form-tel-input {
-  width: calc(100% / 2);
+  width: 100%;
+  @media screen and (min-width: 1200px) {
+    width: calc(100% / 2);
+  }
 }
 
 .form-message-wrapper {
@@ -63,6 +84,5 @@
   color: #9da4bd66;
   font-size: 11px;
   text-transform: uppercase;
-  margin-bottom: 10px;
   transition: color 0.2s linear;
 }

@@ -6,7 +6,6 @@
   text-transform: uppercase;
 
   display: inline-flex;
-  gap: 20px;
   align-items: center;
 
   /* decorative line on the left side */
@@ -14,5 +13,6 @@
     content: ' ';
     width: 60px;
     border-bottom: 1px solid currentColor;
+    margin-right: 20px;
   }
 }

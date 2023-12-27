@@ -15,6 +15,9 @@ h6 {
 
 img {
   display: block;
+  max-width: 100%;
+  height: auto;
+  width: 100%;
 }
 
 ul,
@@ -104,7 +107,7 @@ section {
     max-width: 728px;
   }
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 1200px) {
   .container {
     max-width: 1200px;
   }
@@ -167,7 +170,6 @@ section {
   color: var(--main-pre-title-color);
   text-transform: uppercase;
   display: inline-flex;
-  gap: 20px;
   align-items: center;
   /* decorative line on the left side */
 }
@@ -175,6 +177,7 @@ section {
   content: " ";
   width: 60px;
   border-bottom: 1px solid currentColor;
+  margin-right: 20px;
 }
 
 .section-header {
@@ -549,7 +552,7 @@ section {
 .prices-wrapper {
   background: linear-gradient(180deg, #090b13 0%, rgba(9, 11, 19, 0.2) 100%);
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 1200px) {
   .prices-wrapper {
     display: flex;
   }
@@ -567,7 +570,7 @@ section {
 .prices-list:nth-child(1) {
   padding-bottom: 0;
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 1200px) {
   .prices-list:nth-child(1) {
     background: linear-gradient(180deg, #171a24 0%, rgba(23, 26, 36, 0.2) 100%);
   }
@@ -575,7 +578,7 @@ section {
 .prices-list:nth-child(2) {
   padding-top: 20px;
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 1200px) {
   .prices-list:nth-child(2) {
     background: linear-gradient(180deg, #090b13 0%, rgba(9, 11, 19, 0.2) 100%);
   }
@@ -597,7 +600,7 @@ section {
   display: flex;
   flex-direction: column-reverse;
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 1200px) {
   .features .container {
     flex-direction: row;
   }
@@ -644,7 +647,7 @@ section {
     justify-content: flex-end;
   }
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 1200px) {
   .features-list {
     padding-left: 100px;
     padding-right: 115px;
@@ -756,7 +759,17 @@ section {
 }
 
 .gallery {
-  padding: 130px 0;
+  padding: 84px 0;
+}
+@media screen and (min-width: 768px) {
+  .gallery {
+    padding: 100px 0;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .gallery {
+    padding: 130px 0;
+  }
 }
 .gallery .pre-title {
   margin-bottom: 44px;
@@ -769,35 +782,74 @@ section {
 }
 
 .gallery-list-item {
-  flex-basis: calc((100% - 90px) / 4);
+  flex-basis: 100%;
+}
+@media screen and (min-width: 768px) {
+  .gallery-list-item {
+    flex-basis: calc((100% - 30px) / 2);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .gallery-list-item {
+    flex-basis: calc((100% - 90px) / 4);
+  }
 }
 
 .book-online {
-  padding-top: 130px;
-  padding-bottom: 190px;
-  padding-right: 40px;
-  width: 560px;
+  padding-top: 84px;
+  padding-bottom: 84px;
+}
+@media screen and (min-width: 1200px) {
+  .book-online {
+    padding-top: 130px;
+    padding-bottom: 190px;
+    padding-right: 40px;
+    width: 560px;
+  }
 }
 .book-online .section-header {
   color: var(--main-title-color);
-  margin-bottom: 44px;
+}
+@media screen and (max-width: 768px) {
+  .book-online .section-header {
+    text-align: center;
+  }
 }
 
 .contacts-and-book-online {
   background-color: var(--second-bg-color);
 }
-.contacts-and-book-online .container {
-  display: flex;
-  padding-right: 0;
+@media screen and (min-width: 1200px) {
+  .contacts-and-book-online .container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-right: 0;
+  }
 }
 .contacts-and-book-online .pre-title {
   margin-bottom: 20px;
 }
 
+.book-online-form {
+  margin-top: 44px;
+}
+@media screen and (max-width: 768px) {
+  .book-online-form .btn {
+    margin: 0 auto;
+  }
+}
+
 .inputs-wrapper {
   display: flex;
-  gap: 30px;
+  flex-direction: column;
+  gap: 44px;
   margin-bottom: 44px;
+}
+@media screen and (min-width: 768px) {
+  .inputs-wrapper {
+    flex-direction: row;
+  }
 }
 
 .form-input {
@@ -828,11 +880,21 @@ section {
 }
 
 .form-name-input {
-  width: 50%;
+  width: 100%;
+}
+@media screen and (min-width: 1200px) {
+  .form-name-input {
+    width: 50%;
+  }
 }
 
 .form-tel-input {
-  width: 50%;
+  width: 100%;
+}
+@media screen and (min-width: 1200px) {
+  .form-tel-input {
+    width: 50%;
+  }
 }
 
 .form-message-wrapper {
@@ -854,17 +916,20 @@ section {
   color: rgba(157, 164, 189, 0.4);
   font-size: 11px;
   text-transform: uppercase;
-  margin-bottom: 10px;
   transition: color 0.2s linear;
 }
 
 .contacts {
-  padding: 130px 100px 126px 100px;
-  width: 625px;
   background-image: url(../images/contacts-bg.png);
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
+}
+@media screen and (min-width: 1200px) {
+  .contacts {
+    padding: 130px 100px 126px 100px;
+    width: 625px;
+  }
 }
 .contacts .section-header {
   color: var(--main-title-color);

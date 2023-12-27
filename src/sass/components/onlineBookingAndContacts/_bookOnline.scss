@@ -1,21 +1,30 @@
 .book-online {
-  padding-top: 130px;
-  padding-bottom: 190px;
-  padding-right: 40px;
-  width: 560px;
+  padding-top: 84px;
+  padding-bottom: 84px;
+  @media screen and (min-width: 1200px) {
+    padding-top: 130px;
+    padding-bottom: 190px;
+    padding-right: 40px;
+    width: 560px;
+  }
 
   .section-header {
     color: var(--main-title-color);
-    margin-bottom: 44px;
+    @media screen and (max-width: 768px) {
+      text-align: center;
+    }
   }
 }
 
 .contacts-and-book-online {
   background-color: var(--second-bg-color);
   .container {
-    display: flex;
-
-    padding-right: 0;
+    @media screen and (min-width: 1200px) {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding-right: 0;
+    }
   }
   .pre-title {
     margin-bottom: 20px;
