@@ -18,6 +18,12 @@
 
 .contacts-and-book-online {
   background-color: var(--second-bg-color);
+  //background-image: url(../images/contacts-bg.png);  ////////////TEMPORARY TESTS
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: bottom;
+  max-width: 1350px;
+
   .container {
     @media screen and (min-width: 1200px) {
       display: flex;

@@ -1,5 +1,10 @@
 .barbers-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 30px;
+  justify-content: center;
+  gap: 64px;
+
+  @media screen and (min-width: 1200px) {
+    gap: 30px;
+  }
 }

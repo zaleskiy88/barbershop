@@ -496,7 +496,7 @@ section {
   gap: 30px;
   margin-right: 30px;
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 1200px) {
   .about-list {
     flex-direction: row;
     margin-right: 64px;
@@ -680,7 +680,13 @@ section {
 .barbers-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 30px;
+  justify-content: center;
+  gap: 64px;
+}
+@media screen and (min-width: 1200px) {
+  .barbers-list {
+    gap: 30px;
+  }
 }
 
 .barbers-list-item {
@@ -818,6 +824,10 @@ section {
 
 .contacts-and-book-online {
   background-color: var(--second-bg-color);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: bottom;
+  max-width: 1350px;
 }
 @media screen and (min-width: 1200px) {
   .contacts-and-book-online .container {
@@ -920,10 +930,11 @@ section {
 }
 
 .contacts {
-  background-image: url(../images/contacts-bg.png);
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
+  padding-top: 84px;
+  padding-bottom: 84px;
 }
 @media screen and (min-width: 1200px) {
   .contacts {
@@ -964,13 +975,21 @@ section {
 }
 
 .footer {
-  padding: 56px 0;
+  padding: 56px 0 40px 0;
   background-color: var(--details-bg-color);
   margin: 0 auto;
 }
 .footer .container {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column-reverse;
+  align-items: center;
+  gap: 40px;
+}
+@media screen and (min-width: 768px) {
+  .footer .container {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
 
 .footer-copyright {

@@ -1,8 +1,10 @@
 .contacts {
-  background-image: url(../images/contacts-bg.png);
+  // background-image: url(../images/contacts-bg.png); ////////////TEMPORARY TESTS
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
+  padding-top: 84px;
+  padding-bottom: 84px;
   @media screen and (min-width: 1200px) {
     padding: 130px 100px 126px 100px;
     width: 625px;
