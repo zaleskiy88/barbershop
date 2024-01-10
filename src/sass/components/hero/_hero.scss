@@ -1,28 +1,51 @@
 .hero {
   .container {
     display: flex;
+    padding: 0;
+    width: 100%;
   }
   .pre-title {
     margin-bottom: 20px;
     color: var(--second-pre-title-color);
   }
   .sub-title {
-    max-width: 400px;
+    font-size: 16px;
+    letter-spacing: 0.32px;
+    max-width: 300px;
     color: var(--second-sub-title-color);
+
+    @media screen and (min-width: 768px) {
+      max-width: 355px;
+    }
+
+    @media screen and (min-width: 1200px) {
+      font-size: 18px;
+      letter-spacing: 0.36px;
+      max-width: 400px;
+    }
   }
 }
 
 .hero-header {
-  font-size: 72px;
+  font-size: 45px;
   font-weight: 700;
-  line-height: 1.18;
-  letter-spacing: 3.6px;
+  line-height: 1.17;
+  letter-spacing: 2.4px;
   margin-bottom: 20px;
   color: var(--main-title-color);
+
+  @media screen and (min-width: 768px) {
+    font-size: 48px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    font-size: 72px;
+    letter-spacing: 3.6px;
+  }
 }
 
 .hero-content {
-  padding: 270px 100px 200px 100px;
+  padding: 208px 30px 183px 30px;
   flex-grow: 1;
 
   background-image: linear-gradient(#191c2633, #191c2633),
@@ -30,4 +53,18 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+
+  // For small screens smaller padding to aovid hor. scroll
+  @media screen and (min-width: 320px) and (max-width: 350px) {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  //
+  @media screen and (min-width: 768px) {
+    padding: 280px 70px 234px 70px;
+  }
+  @media screen and (min-width: 1200px) {
+    padding: 270px 100px 200px 100px;
+  }
 }
+//  padding: 208px 31px 183px 30px;
