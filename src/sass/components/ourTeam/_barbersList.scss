@@ -1,12 +1,12 @@
 .barbers-list {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  align-items: center;
   gap: 64px;
 
   @media screen and (min-width: 1200px) {
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 30px;
+    gap: 29px;
   }
 }

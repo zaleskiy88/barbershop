@@ -6,13 +6,38 @@
     <ul class="barbers-list">
       <li class="barbers-list-item">
         <div class="barber-img-wrapper">
-          <img
-            class="barber-img"
-            src="./images/barber-john-smith.jpg"
-            alt="Barber at work"
-            width="370"
-            height="346"
-          />
+          <picture>
+            <source
+              srcset="
+                ./images/barber-john-smith.jpg    1x,
+                ./images/barber-john-smith@2x.jpg 2x,
+                ./images/barber-john-smith@3x.jpg 3x
+              "
+              media="(min-width:1200px)"
+            />
+            <source
+              srcset="
+                ./images/barber-john-smith-tablet.jpg    1x,
+                ./images/barber-john-smith-tablet@2x.jpg 2x,
+                ./images/barber-john-smith-tablet@3x.jpg 3x
+              "
+              media="(min-width:768px)"
+            />
+            <source
+              srcset="
+                ./images/barber-john-smith-mobile.jpg    1x,
+                ./images/barber-john-smith-mobile@2x.jpg 2x,
+                ./images/barber-john-smith-mobile@3x.jpg 3x
+              "
+              media="(min-width:320px)"
+            />
+            <img
+              class="barber-img"
+              src="./images/barber-john-smith.jpg"
+              alt="Barber at work"
+            />
+          </picture>
+
           <p class="barber-overlay-description">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi
             voluptatum repellendus necessitatibus, facere veniam itaque quam
@@ -72,13 +97,37 @@
       </li>
       <li class="barbers-list-item">
         <div class="barber-img-wrapper">
-          <img
-            class="barber-img"
-            src="./images/barber-michael-doe.jpg"
-            alt="Barber at work"
-            width="370"
-            height="346"
-          />
+          <picture>
+            <source
+              srcset="
+                ./images/barber-michael-doe.jpg    1x,
+                ./images/barber-michael-doe@2x.jpg 2x,
+                ./images/barber-michael-doe@3x.jpg 3x
+              "
+              media="(min-width:1200px)"
+            />
+            <source
+              srcset="
+                ./images/barber-michael-doe-tablet.jpg    1x,
+                ./images/barber-michael-doe-tablet@2x.jpg 2x,
+                ./images/barber-michael-doe-tablet@3x.jpg 3x
+              "
+              media="(min-width:768px)"
+            />
+            <source
+              srcset="
+                ./images/barber-michael-doe-mobile.jpg    1x,
+                ./images/barber-michael-doe-mobile@2x.jpg 2x,
+                ./images/barber-michael-doe-mobile@3x.jpg 3x
+              "
+              media="(min-width:320px)"
+            />
+            <img
+              class="barber-img"
+              src="./images/barber-michael-doe.jpg"
+              alt="Barber at work"
+            />
+          </picture>
           <p class="barber-overlay-description">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi
             voluptatum repellendus necessitatibus, facere veniam itaque quam
@@ -138,13 +187,37 @@
       </li>
       <li class="barbers-list-item">
         <div class="barber-img-wrapper">
-          <img
-            class="barber-img"
-            src="./images/barber-alan-black.jpg"
-            alt="Barber at work"
-            width="370"
-            height="346"
-          />
+          <picture>
+            <source
+              srcset="
+                ./images/barber-alan-black.jpg    1x,
+                ./images/barber-alan-black@2x.jpg 2x,
+                ./images/barber-alan-black@3x.jpg 3x
+              "
+              media="(min-width:1200px)"
+            />
+            <source
+              srcset="
+                ./images/barber-alan-black-tablet.jpg    1x,
+                ./images/barber-alan-black-tablet@2x.jpg 2x,
+                ./images/barber-alan-black-tablet@3x.jpg 3x
+              "
+              media="(min-width:768px)"
+            />
+            <source
+              srcset="
+                ./images/barber-alan-black-mobile.jpg    1x,
+                ./images/barber-alan-black-mobile@2x.jpg 2x,
+                ./images/barber-alan-black-mobile@3x.jpg 3x
+              "
+              media="(min-width:320px)"
+            />
+            <img
+              class="barber-img"
+              src="./images/barber-alan-black.jpg"
+              alt="Barber at work"
+            />
+          </picture>
           <p class="barber-overlay-description">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi
             voluptatum repellendus necessitatibus, facere veniam itaque quam
