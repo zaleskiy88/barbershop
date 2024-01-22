@@ -1,11 +1,15 @@
 <!-- ///////////////////////////////HEADER//////////////////////////////////////////////////////////// -->
-<header class="header" data-aos="fade-down">
+<header class="header">
   <div class="container">
-    <a href="/" class="header-logo-link" data-aos="fade-right">
+    <a href="/" class="header-logo-link">
       <svg class="header-logo-icon" width="66" height="56">
         <use href="./images/symbol-defs.svg#icon-main-logo"></use>
       </svg>
     </a>
+
+    <button type="button" class="burger-menu-btn" data-mobile-menu-open>
+      X
+    </button>
 
     <nav class="header-nav">
       <ul class="header-nav-list list">
@@ -36,8 +40,74 @@
       <a href="tel:+351987654321" class="header-text header-tel"
         >+351 987 654 321</a
       >
-      <div class="btn-wrapper" data-aos="fade-left">
-        <button type="button" class="btn" data-modal-open>Book online</button>
+      <div class="btn-wrapper">
+        <button type="button" class="btn" data-modal-open hdr-contacts-btn>
+          Book online
+        </button>
+      </div>
+    </div>
+    <!------------------------------------------------ Mobile Header&Navigation ------------------------------------------------->
+    <div class="mobile-header is-hidden visually-hidden" data-mobile-menu>
+      <button
+        type="button"
+        class="mobile-header-close-btn"
+        data-mobile-menu-close
+      >
+        X
+      </button>
+      <div class="mobile-header-wrapper">
+        <nav class="mobile-header-nav">
+          <ul class="mobile-header-nav-list list">
+            <li class="mobile-header-navList-item">
+              <a class="mobile-navList-link" href="#about-us">About us</a>
+            </li>
+            <li class="mobile-navList-item">
+              <a class="mobile-navList-link" href="#prices"
+                >Services & prices</a
+              >
+            </li>
+            <li class="mobile-navList-item">
+              <a class="mobile-navList-link" href="#barbers">Our barbers</a>
+            </li>
+            <li class="mobile-navList-item">
+              <a class="mobile-navList-link" href="#contacts">Contacts</a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="mobile-header-contacts">
+          <a href="tel:+351987654321" class="mobile-header-contact"
+            >+351 987 654 321</a
+          >
+          <div class="btn-wrapper">
+            <button type="button" class="btn" data-modal-open mob-modal-btn>
+              Book online
+            </button>
+          </div>
+        </div>
+
+        <div class="mobile-header-social-list-wrapper">
+          <ul class="mobile-header-socialList">
+            <li class="mobile-header-socialList-item">
+              <a
+                href="https://www.instagram.com/"
+                class="mobile-header-social-link"
+                target="_blank"
+                rel="noopener nofollow noreferrer"
+                >Instagram</a
+              >
+            </li>
+            <li class="mobile-header-socialList-item">
+              <a
+                href="https://www.youtube.com/"
+                class="mobile-header-social-link"
+                target="_blank"
+                rel="noopener nofollow noreferrer"
+                >Youtube</a
+              >
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>

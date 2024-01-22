@@ -1,29 +1,38 @@
 const refs = {
-  buttons: document.querySelectorAll('[data-modal-open]'),
-  closeModalBtn: document.querySelector('[data-modal-close]'),
-  modal: document.querySelector('[data-modal]'),
   body: document.querySelector('body'),
+  modal: document.querySelector('[data-modal]'),
+  closeModalBtn: document.querySelector('[data-modal-close]'),
+  buttons: document.querySelectorAll('[data-modal-open]'),
 };
-console.log(refs.buttons);
-//const headerBtn = refs.buttons[0];  *//////TEMPORARY
-const aboutBtn = refs.buttons[0];
-const pricesBtn = refs.buttons[1];
 
-//headerBtn.addEventListener('click', toggleModal);    /////TEMPORARY
+const { body, modal, closeModalBtn } = refs;
+const headerContactsBtn = refs.buttons[0];
+const mobileModalBtn = refs.buttons[1];
+const aboutBtn = refs.buttons[2];
+const pricesBtn = refs.buttons[3];
+
+headerContactsBtn.addEventListener('click', toggleModal);
+mobileModalBtn.addEventListener('click', toggleModal);
 aboutBtn.addEventListener('click', toggleModal);
 pricesBtn.addEventListener('click', toggleModal);
-refs.closeModalBtn.addEventListener('click', toggleModal);
-document.addEventListener('keydown', closeOnEsc);
+closeModalBtn.addEventListener('click', toggleModal);
+modal.addEventListener('click', closeOnClick);
+window.addEventListener('keydown', closeOnEsc);
 
-function toggleModal(e) {
-  refs.modal.classList.toggle('is-hidden');
-  refs.body.classList.toggle('no-scroll');
-  console.log('first');
+function toggleModal() {
+  modal.classList.toggle('is-hidden');
+  modal.classList.toggle('visually-hidden');
+  body.classList.toggle('no-scroll');
 }
 
 function closeOnEsc(e) {
-  if (e.key === 'Escape') {
-    return toggleModal();
+  if (e.key === 'Escape' && modal.classList.length === 1) {
+    toggleModal();
   }
-  return;
+}
+
+function closeOnClick(e) {
+  if (e.target === modal) {
+    toggleModal();
+  }
 }

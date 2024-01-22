@@ -7,6 +7,9 @@
   padding-bottom: 32px;
 
   .container {
+    @media screen and (max-width: 768px) {
+      justify-content: space-between;
+    }
     display: flex;
     align-items: center;
   }
@@ -18,4 +21,10 @@
   font-size: 12px;
   line-height: 1.33;
   letter-spacing: 0.1em;
+}
+
+.burger-menu-btn {
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
 }

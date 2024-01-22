@@ -1,6 +1,6 @@
 .header-logo-link {
   margin-right: 70px;
-  color: var(--main-pre-title-color);
+  color: #ffff;
   fill: currentColor;
   outline: none;
 
@@ -10,5 +10,9 @@
   &:focus {
     color: var(--accent-color);
     outline: none;
+  }
+
+  @media screen and (min-width: 768px) {
+    color: #303030;
   }
 }

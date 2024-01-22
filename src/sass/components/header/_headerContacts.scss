@@ -1,8 +1,11 @@
 .header-contacts {
-  display: flex;
-  align-items: center;
-  gap: 38px;
-  margin-left: auto;
+  display: none;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    align-items: center;
+    gap: 38px;
+    margin-left: auto;
+  }
 }
 
 .header-tel {
