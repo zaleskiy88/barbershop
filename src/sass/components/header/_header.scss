@@ -27,4 +27,19 @@
   @media screen and (min-width: 768px) {
     display: none;
   }
+  color: #ffffff;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s linear;
+
+  &:hover,
+  &:focus {
+    transform: rotateZ(90deg);
+    color: var(--accent-color);
+  }
+}
+
+.burger-icon {
+  fill: currentColor;
 }

@@ -354,10 +354,25 @@ section {
   letter-spacing: 0.1em;
 }
 
+.burger-menu-btn {
+  color: #ffffff;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s linear;
+}
 @media screen and (min-width: 768px) {
   .burger-menu-btn {
     display: none;
   }
+}
+.burger-menu-btn:hover, .burger-menu-btn:focus {
+  transform: rotateZ(90deg);
+  color: var(--accent-color);
+}
+
+.burger-icon {
+  fill: currentColor;
 }
 
 .header-logo-link {
@@ -1185,8 +1200,9 @@ section {
   height: 100vh;
   padding-left: 45px;
   padding-right: 25%;
-  transform: translateX(15%);
   background-color: #fff;
+  transform: translateX(15%);
+  transition: all 0.5s linear;
 }
 
 .mobile-header-close-btn {

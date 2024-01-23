@@ -1,7 +1,4 @@
 .mobile-header {
-  //display: none;
-  ///////
-
   position: fixed;
   top: 0;
   right: 0;
@@ -11,8 +8,10 @@
 
   padding-left: 45px;
   padding-right: 25%;
-  transform: translateX(15%);
   background-color: #fff;
+  transform: translateX(15%);
+
+  transition: all 0.5s linear;
 }
 
 .mobile-header-close-btn {
