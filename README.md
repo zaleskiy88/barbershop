@@ -4,7 +4,7 @@
 
 A simple landing webpage of some barbershop. Created with ParcelJs.
 
-#Used tech stack:
+# Used tech stack:
 
 - HTML;
 - CSS;
