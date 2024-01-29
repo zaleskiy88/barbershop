@@ -12,6 +12,15 @@
   transform: translateX(15%);
 
   transition: all 0.5s linear;
+
+  .btn {
+    color: var(--second-btn-color);
+
+    &:hover,
+    &:focus {
+      color: var(--main-btn-color);
+    }
+  }
 }
 
 .mobile-header-close-btn {
@@ -25,6 +34,18 @@
 
   border: none;
   background-color: #ffff;
+  color: #303030;
+
+  transition: color 0.2s linear;
+
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
+}
+
+.mobile-menu-close-icon {
+  fill: currentColor;
 }
 
 .mobile-header-wrapper {
@@ -44,6 +65,8 @@
   letter-spacing: 1.8px;
   color: var(--mobile-header-text-color);
 
+  transition: color 0.2s linear;
+
   &:hover,
   &:focus {
     color: var(--accent-color);
@@ -61,6 +84,11 @@
   color: var(--mobile-header-text-color);
   font-weight: 600;
   letter-spacing: 1.8px;
+
+  &:hover,
+  &:focus {
+    color: var(--text-hover);
+  }
 }
 
 .mobile-header-socialList {
@@ -97,4 +125,28 @@
   color: var(--mobile-header-text-color);
 
   transition: all 0.2s linear;
+
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+    outline: none;
+  }
+
+  /* line under social link */
+  &::after {
+    content: '';
+    visibility: hidden;
+    height: 1px;
+    width: 100%;
+    border-radius: 4px;
+    display: block;
+    background-color: var(--accent-color);
+    transform: scale(0);
+    transition: 0.18s linear;
+  }
+  &:hover::after,
+  &:focus::after {
+    visibility: visible;
+    transform: scale(1);
+  }
 }

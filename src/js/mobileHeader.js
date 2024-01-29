@@ -7,9 +7,7 @@ const refs = {
 const { openMenuBtn, closeMenuBtn, mobileMenu } = refs;
 
 function toggleMobileMenu() {
-  mobileMenu.classList.toggle('is-hidden');
-  mobileMenu.classList.toggle('no-scroll');
-  mobileMenu.classList.toggle('visually-hidden');
+  mobileMenu.classList.toggle('mobile-menu-hide');
 }
 
 openMenuBtn.addEventListener('click', toggleMobileMenu);

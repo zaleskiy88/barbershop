@@ -1,0 +1,10 @@
+.header {
+  .mobile-menu-hide {
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+    white-space: nowrap;
+    overflow: hidden;
+    transform: translateX(110%);
+  }
+}

@@ -96,6 +96,15 @@ section {
   overflow: hidden;
 }
 
+.header .mobile-menu-hide {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  white-space: nowrap;
+  overflow: hidden;
+  transform: translateX(110%);
+}
+
 .container {
   width: 100%;
   margin: 0 auto;
@@ -124,7 +133,7 @@ section {
   font-weight: 600;
   line-height: normal;
   letter-spacing: 2.2px;
-  transition: 0.2s linear;
+  transition: color 0.2s linear;
   /* line under social link */
 }
 .social-link:hover, .social-link:focus {
@@ -1204,6 +1213,12 @@ section {
   transform: translateX(15%);
   transition: all 0.5s linear;
 }
+.mobile-header .btn {
+  color: var(--second-btn-color);
+}
+.mobile-header .btn:hover, .mobile-header .btn:focus {
+  color: var(--main-btn-color);
+}
 
 .mobile-header-close-btn {
   margin-top: 48px;
@@ -1214,6 +1229,15 @@ section {
   margin-left: auto;
   border: none;
   background-color: white;
+  color: #303030;
+  transition: color 0.2s linear;
+}
+.mobile-header-close-btn:hover, .mobile-header-close-btn:focus {
+  color: var(--accent-color);
+}
+
+.mobile-menu-close-icon {
+  fill: currentColor;
 }
 
 .mobile-header-wrapper {
@@ -1233,6 +1257,7 @@ section {
   font-weight: 600;
   letter-spacing: 1.8px;
   color: var(--mobile-header-text-color);
+  transition: color 0.2s linear;
 }
 .mobile-navList-link:hover, .mobile-navList-link:focus {
   color: var(--accent-color);
@@ -1249,6 +1274,9 @@ section {
   color: var(--mobile-header-text-color);
   font-weight: 600;
   letter-spacing: 1.8px;
+}
+.mobile-header-contact:hover, .mobile-header-contact:focus {
+  color: var(--text-hover);
 }
 
 .mobile-header-socialList {
@@ -1284,4 +1312,24 @@ section {
   letter-spacing: 2.8px;
   color: var(--mobile-header-text-color);
   transition: all 0.2s linear;
+  /* line under social link */
+}
+.mobile-header-social-link:hover, .mobile-header-social-link:focus {
+  color: var(--accent-color);
+  outline: none;
+}
+.mobile-header-social-link::after {
+  content: "";
+  visibility: hidden;
+  height: 1px;
+  width: 100%;
+  border-radius: 4px;
+  display: block;
+  background-color: var(--accent-color);
+  transform: scale(0);
+  transition: 0.18s linear;
+}
+.mobile-header-social-link:hover::after, .mobile-header-social-link:focus::after {
+  visibility: visible;
+  transform: scale(1);
 }/*# sourceMappingURL=index.css.map */
