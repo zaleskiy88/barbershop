@@ -1,5 +1,4 @@
 .header-logo-link {
-  margin-right: 70px;
   color: #ffff;
   fill: currentColor;
   outline: none;
@@ -14,5 +13,10 @@
 
   @media screen and (min-width: 768px) {
     color: #303030;
+    margin-right: 48px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-right: 70px;
   }
 }

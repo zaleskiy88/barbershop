@@ -8,7 +8,10 @@
 
 .header-nav-list {
   display: flex;
-  gap: 36px;
+  gap: 20px;
+  @media screen and (min-width: 1200px) {
+    gap: 38px;
+  }
 }
 
 .header-navList-link {

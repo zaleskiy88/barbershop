@@ -1,8 +1,8 @@
-# LivePage: https://zaleskiy88.github.io/barbershop
-
 # About:
 
-A simple landing webpage of some barbershop. Created with ParcelJs.
+A simple landing webpage of some barbershop. Created with ParcelJs. LivePage:
+
+Live page: https://zaleskiy88.github.io/barbershop
 
 # Used tech stack:
 

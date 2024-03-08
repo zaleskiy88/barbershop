@@ -2,6 +2,14 @@
   display: none;
   @media screen and (min-width: 768px) {
     display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 20px;
+    margin-left: auto;
+  }
+
+  @media screen and (min-width: 1200px) {
+    display: flex;
     align-items: center;
     gap: 38px;
     margin-left: auto;
